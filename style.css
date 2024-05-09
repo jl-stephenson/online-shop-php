@@ -1,0 +1,21 @@
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background-color: orchid;
+    min-width: 200px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card2 {
+    background-color: bisque;
+    min-width: 200px;
+    text-align: center;
+    padding: 1rem;
+}
