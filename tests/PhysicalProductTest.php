@@ -15,4 +15,10 @@ class PhysicalProductTest extends TestCase
         $this->assertSame(2.0, $physicalProduct->weight);
         $this->assertSame('Not bad', $physicalProduct->description);
     }
+
+    public function testPhysicalProductConstruct_malformedName()
+    {
+        $this->expectException(TypeError::class);
+        new PhysicalProduct(([]), 5.99, 2, 'Not bad');
+    }
 }
