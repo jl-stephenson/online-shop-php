@@ -6,8 +6,8 @@ class VirtualProduct extends Product
 {
 
 
-    private float $fileSize;
-    private string $fileType;
+    public float $fileSize;
+    public string $fileType;
 
 // Construct properties for:
 // name (string), price (float), fileSize (float), fileType (string), description (string);

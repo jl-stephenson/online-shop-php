@@ -4,6 +4,7 @@ require_once 'src/Product.php';
 require_once 'src/PhysicalProduct.php';
 require_once 'src/VirtualProduct.php';
 require_once 'src/Customer.php';
+require_once 'src/Basket.php';
 
 
 $physItem1 = new PhysicalProduct("Camera", 299.99, 400, "A great all-rounder");
@@ -12,7 +13,10 @@ $virtItem1 = new VirtualProduct("Short Stories", 5, 128, "ePub", "A cracking rea
 $virtItem2 = new VirtualProduct("Great Song", 0.99, 1218, "wav", "Not bad.");
 $user1 = new Customer("Bob", "bob@bob.com", "Nowhere, No Town, NNN 000");
 $user2 = new Customer("Geri", "geri@geri.com", "Somewhere, Some Town, SSS 111");
-
+$basket = new Basket();
+$selectedItems = [$physItem1, $virtItem2];
+$basket->addItem($physItem1);
+$basket->addItem($virtItem2);
 
 ?>
 
@@ -39,6 +43,12 @@ $user2 = new Customer("Geri", "geri@geri.com", "Somewhere, Some Town, SSS 111");
     echo $user1->getDisplay();
     echo $user2->getDisplay();
     ?>
+    <div class="basket">
+        <h3>In Your Basket:</h3>
+        <?php
+        $basket->getDisplay($basket->basketItems);
+        ?>
+    </div>
 
 
 </div>

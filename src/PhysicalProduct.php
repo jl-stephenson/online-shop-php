@@ -4,7 +4,7 @@ require_once 'Product.php';
 
 class PhysicalProduct extends Product
 {
-    private float $weight;
+    public float $weight;
 
     // Define a __construct function to pass in properties for:
     // name (string), price (float), weight (float), description (string)

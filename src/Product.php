@@ -2,9 +2,9 @@
 
 abstract class Product
 {
-    protected string $name;
-    protected float $price;
-    protected string $description;
+    public string $name;
+    public float $price;
+    public string $description;
 
     public function __construct(string $name, float $price, string $description)
     {
